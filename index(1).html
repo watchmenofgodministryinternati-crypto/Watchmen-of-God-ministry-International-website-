@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Watchmen of God Ministry International — Taking the Gospel to Nations. A Christ-centered ministry serving Kampala, Uganda and beyond through prayer, teaching, and evangelism.">
+  <meta name="theme-color" content="#062d62">
+  <title>Watchmen of God Ministry International | Taking the Gospel to Nations</title>
+  <style>
+    :root{--navy:#062b5b;--blue:#0b4c91;--gold:#f4b629;--gold2:#ffd36a;--ink:#10294c;--muted:#53657d;--pale:#edf5ff;--white:#fff;--shadow:0 14px 35px rgba(5,36,77,.12)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:inherit}
+    .topbar{background:var(--navy);color:#fff;font-size:.86rem;padding:8px 5%;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .topbar span{margin-right:18px}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);box-shadow:0 3px 18px rgba(0,0,0,.08);backdrop-filter:blur(8px)}
+    .nav-wrap{max-width:1200px;margin:auto;padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+    .logo{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#fff7d9,#e9f3ff);border:3px solid var(--gold);color:var(--navy);font-size:29px;box-shadow:0 0 0 3px #e5eef9}
+    .brand-title{font-family:Georgia,serif;font-size:1.2rem;font-weight:bold;line-height:1.1;color:var(--navy)}
+    .tagline{display:block;color:#a86d00;letter-spacing:1.3px;font-size:.67rem;font-weight:800;margin-top:5px}
+    nav{display:flex;align-items:center;gap:22px}
+    nav a{text-decoration:none;font-weight:700;font-size:.9rem;color:#142b49}
+    nav a:hover,nav a:focus{color:#a86d00}
+    .menu-toggle{display:none;background:var(--navy);color:white;border:0;border-radius:8px;padding:9px 12px;font-size:1.1rem}
+    .hero{position:relative;isolation:isolate;min-height:510px;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(3,31,67,.92) 0%,rgba(5,48,92,.78) 48%,rgba(4,34,66,.18) 100%),url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85');background-size:cover;background-position:center}
+    .hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,#062b5b 0%,#0c5792 55%,#e4a22c 140%)}
+    .hero-inner{max-width:1200px;width:100%;margin:auto;padding:76px 5% 65px}
+    .eyebrow{font-weight:800;letter-spacing:3px;color:var(--gold2);text-transform:uppercase;font-size:.88rem}
+    h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.15}
+    h1{font-size:clamp(2.5rem,6vw,4.6rem);max-width:800px;margin:10px 0 12px}
+    .hero h2{font-size:clamp(1.3rem,3vw,2rem);color:var(--gold2);margin:0 0 14px}
+    .hero p{font-size:1.08rem;max-width:650px;color:#f3f7ff;margin:0 0 24px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:2px solid transparent;border-radius:9px;padding:12px 20px;font-weight:800;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#132b4c}
+    .btn-outline{border-color:#fff;color:#fff;background:transparent}
+    .availability{font-size:.9rem;color:#fff}
+    .availability strong{color:var(--gold2)}
+    .verse{position:absolute;right:5%;bottom:30px;max-width:280px;text-align:right;font-family:Georgia,serif;font-style:italic;font-size:1.05rem;text-shadow:0 2px 9px #00172f}
+    .verse b{display:block;color:var(--gold2);font-style:normal;font-size:.9rem;margin-top:5px}
+    section{padding:72px 5%}
+    .container{max-width:1150px;margin:auto}
+    .section-label{color:#b77b00;text-transform:uppercase;letter-spacing:1.7px;font-size:.8rem;font-weight:800;margin-bottom:7px}
+    h2{font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin:0 0 10px}
+    .lead{font-size:1.08rem;color:var(--muted);max-width:750px;margin-top:0}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.4fr;gap:42px;align-items:center}
+    .image-panel{min-height:330px;border-radius:18px;background:linear-gradient(160deg,rgba(4,37,78,.12),rgba(4,37,78,.45)),url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1000&q=85') center/cover;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .image-panel:after{content:"✝";position:absolute;right:20px;bottom:8px;color:rgba(255,255,255,.78);font-size:5rem}
+    .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:25px}
+    .info-card{border-left:4px solid var(--gold);padding:8px 0 8px 18px}
+    .info-card h3{color:var(--navy);font-size:1.35rem;margin:0 0 7px}
+    .info-card p{margin:0;color:var(--muted)}
+    .beliefs{background:linear-gradient(115deg,#edf5ff,#f8fbff)}
+    .belief-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:30px}
+    .belief{padding:12px 16px;text-align:center;border-right:1px solid #c5d6eb}
+    .belief:last-child{border-right:0}
+    .belief .symbol{font-size:2rem;color:#bd8100;margin-bottom:8px}
+    .belief p{font-size:.92rem;margin:0}
+    .ministry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
+    .ministry-card{padding:27px 24px;border:1px solid #e0e9f5;border-radius:16px;background:#fff;box-shadow:0 7px 22px rgba(5,36,77,.06)}
+    .ministry-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);transition:.2s}
+    .round-icon{width:56px;height:56px;border-radius:50%;background:var(--navy);color:white;display:grid;place-items:center;font-size:1.6rem;margin-bottom:17px}
+    .ministry-card h3{font-size:1.35rem;color:var(--navy);margin:0 0 8px}
+    .ministry-card p{color:var(--muted);margin:0}
+    .messages{background:linear-gradient(110deg,rgba(3,35,74,.94),rgba(6,68,125,.96)),url('https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1600&q=80') center/cover;color:#fff}
+    .messages h2{color:#fff}
+    .messages .lead{color:#e3efff}
+    .message-row{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+    .message-row blockquote{margin:0;max-width:300px;font-family:Georgia,serif;font-style:italic;font-size:1.25rem}
+    .message-row blockquote cite{display:block;color:var(--gold2);font-size:.9rem;margin-top:8px}
+    .contact{background:#fff}
+    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+    .contact-items{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+    .contact-item{display:flex;gap:12px;align-items:flex-start}
+    .contact-icon{width:42px;height:42px;flex:0 0 42px;border-radius:50%;background:var(--navy);color:white;display:grid;place-items:center}
+    .contact-item strong{display:block;color:var(--navy)}
+    .contact-item a{text-decoration:none;color:var(--muted);overflow-wrap:anywhere}
+    .contact-item p{margin:0;color:var(--muted);font-size:.94rem}
+    form{background:#f2f7fd;border:1px solid #d9e5f4;padding:25px;border-radius:15px;box-shadow:var(--shadow)}
+    form h3{margin:0 0 15px;color:var(--navy);font-size:1.5rem}
+    .field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    label{display:block;font-size:.86rem;font-weight:700;margin-bottom:5px}
+    input,textarea{width:100%;padding:12px 13px;border:1px solid #c8d7e8;border-radius:7px;background:white;font:inherit;margin-bottom:13px;color:var(--ink)}
+    input:focus,textarea:focus{outline:2px solid #7eb8ed;border-color:var(--blue)}
+    textarea{min-height:125px;resize:vertical}
+    form .btn{width:100%;border:0;font-size:1rem}
+    .form-note{font-size:.78rem;color:var(--muted);margin:10px 0 0}
+    footer{background:#041f43;color:#eaf2ff;padding:32px 5%}
+    .footer-inner{max-width:1150px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}
+    .footer-brand{display:flex;align-items:center;gap:13px}
+    .footer-brand .logo{width:52px;height:52px;font-size:25px}
+    footer .brand-title{color:white;font-size:1.05rem}
+    footer .tagline{color:var(--gold2)}
+    .footer-contact a{color:#fff;text-decoration:none}
+    .copyright{font-size:.82rem;color:#c1d0e4;text-align:right}
+    @media(max-width:900px){nav{gap:13px}nav a{font-size:.82rem}.belief-grid{grid-template-columns:repeat(3,1fr)}.belief:nth-child(3){border-right:0}.belief:nth-child(n+4){border-top:1px solid #c5d6eb}.about-grid{gap:25px}}
+    @media(max-width:700px){
+      .topbar{font-size:.78rem;justify-content:center;text-align:center}.nav-wrap{padding:10px 5%}.logo{width:47px;height:47px;font-size:24px}.brand-title{font-size:1rem}.tagline{font-size:.58rem;letter-spacing:.8px}
+      .menu-toggle{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:15px 5% 20px;box-shadow:0 12px 18px rgba(0,0,0,.1);flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:11px 0;border-bottom:1px solid #edf1f7;font-size:.95rem}
+      .hero{min-height:570px;background-position:center}.hero-inner{padding:62px 6% 100px}.hero p{font-size:1rem}.verse{left:6%;right:6%;bottom:17px;text-align:left;font-size:.9rem}
+      section{padding:54px 6%}.about-grid,.contact-grid{grid-template-columns:1fr}.image-panel{min-height:240px;order:2}.mission-grid{grid-template-columns:1fr}.belief-grid{grid-template-columns:1fr 1fr}.belief{border-right:1px solid #c5d6eb!important;border-top:1px solid #c5d6eb}.belief:nth-child(2n){border-right:0!important}.belief:first-child,.belief:nth-child(2){border-top:0}.ministry-grid{grid-template-columns:1fr}.message-row{align-items:flex-start}.message-row blockquote{max-width:none}.contact-items{grid-template-columns:1fr}.field-row{grid-template-columns:1fr;gap:0}.copyright{text-align:left}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div><span>📍 Kampala, Uganda</span><span>✉ <a href="mailto:holysamuel98@gmail.com" style="color:#fff;text-decoration:none">holysamuel98@gmail.com</a></span></div>
+    <div>✝ Faith&nbsp; • &nbsp;Prayer&nbsp; • &nbsp;The Gospel</div>
+  </div>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="#home" aria-label="Watchmen of God Ministry International home">
+        <div class="logo" aria-hidden="true">🌍📖</div>
+        <div><div class="brand-title">Watchmen of God<br>Ministry International</div><span class="tagline">TAKING THE GOSPEL TO NATIONS</span></div>
+      </a>
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+      <nav id="mainNav" aria-label="Main navigation">
+        <a href="#home" onclick="closeMenu()">Home</a><a href="#about" onclick="closeMenu()">About</a><a href="#beliefs" onclick="closeMenu()">Beliefs</a><a href="#ministries" onclick="closeMenu()">Ministries</a><a href="#messages" onclick="closeMenu()">Messages</a><a href="#contact" onclick="closeMenu()">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="eyebrow">Welcome</div>
+        <h1>Watchmen of God<br>Ministry International</h1>
+        <h2>Taking the Gospel to Nations</h2>
+        <p>A Christ-centered ministry committed to prayer, teaching the Word of God, and sharing the gospel in Kampala and beyond.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#contact">▦ &nbsp;Visit Service</a>
+          <a class="btn btn-outline" href="#messages">▶ &nbsp;Watch Messages</a>
+        </div>
+        <div class="availability">◷ &nbsp;Ministry availability: <strong>All day, Monday to Monday</strong></div>
+      </div>
+      <div class="verse">“Go ye into all the world,<br>and preach the gospel...”<b>Mark 16:15</b></div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="image-panel" role="img" aria-label="Bible and cross at sunrise"></div>
+        <div>
+          <div class="section-label">Who We Are</div>
+          <h2>Faith, prayer, and the Gospel</h2>
+          <p class="lead">Serving people and sharing the message of Jesus Christ.</p>
+          <div class="mission-grid">
+            <article class="info-card"><h3>Our Mission</h3><p>To spread the gospel with boldness, raise prayerful watchmen, and disciple believers—until the message of Christ reaches nations.</p></article>
+            <article class="info-card"><h3>Our Vision</h3><p>To take the Gospel to all nations; to see lives transformed through the Word of God, communities strengthened in faith, and many drawn to Jesus Christ.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="beliefs" id="beliefs">
+      <div class="container">
+        <div class="section-label">Our Foundation</div>
+        <h2>What We Believe</h2>
+        <p class="lead">Our ministry is grounded in the Christian faith and the call to serve.</p>
+        <div class="belief-grid">
+          <div class="belief"><div class="symbol">▤</div><p>The Bible is the inspired Word of God.</p></div>
+          <div class="belief"><div class="symbol">✝</div><p>Jesus Christ is Lord and Savior.</p></div>
+          <div class="belief"><div class="symbol">🙏</div><p>Prayer is essential for spiritual growth and ministry.</p></div>
+          <div class="belief"><div class="symbol">♡</div><p>Faith in God brings transformation and purpose.</p></div>
+          <div class="belief"><div class="symbol">⛪</div><p>The church is called to evangelize, teach, and serve.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ministries">
+      <div class="container">
+        <div class="section-label">How We Serve</div>
+        <h2>Our Ministries</h2>
+        <p class="lead">Growing in faith and carrying the message of Christ to others.</p>
+        <div class="ministry-grid">
+          <article class="ministry-card"><div class="round-icon">🙏</div><h3>Prayer &amp; Intercession</h3><p>We stand in prayer for families, leaders, churches, cities, and nations.</p></article>
+          <article class="ministry-card"><div class="round-icon">📖</div><h3>Teaching &amp; Discipleship</h3><p>We teach the Word of God to build believers in truth, maturity, and obedience.</p></article>
+          <article class="ministry-card"><div class="round-icon">📣</div><h3>Outreach &amp; Evangelism</h3><p>We share the gospel across communities and invite people to know Christ.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="messages" id="messages">
+      <div class="container message-row">
+        <div>
+          <div class="section-label">Watch &amp; Listen</div>
+          <h2>Messages</h2>
+          <p class="lead">Gospel teaching and ministry messages will be shared here.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="mailto:holysamuel98@gmail.com?subject=Ministry%20Messages">▶ &nbsp;Watch Messages</a>
+            <a class="btn btn-outline" href="#contact">✉ &nbsp;Ask About Messages</a>
+          </div>
+          <p style="margin:0;color:#e3efff">Visit our ministry or contact us for information about messages and programs.</p>
+        </div>
+        <blockquote>“Your word is a lamp to my feet and a light to my path.”<cite>Psalm 119:105</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-label">Get in Touch</div>
+          <h2>Come and Hear the Gospel</h2>
+          <p class="lead">Contact us to connect with Watchmen of God Ministry International.</p>
+          <div class="contact-items">
+            <div class="contact-item"><div class="contact-icon">☎</div><div><strong>Phone</strong><a href="tel:+256783416680">0783416680</a></div></div>
+            <div class="contact-item"><div class="contact-icon">✉</div><div><strong>Email</strong><a href="mailto:holysamuel98@gmail.com">holysamuel98@gmail.com</a></div></div>
+            <div class="contact-item"><div class="contact-icon">📍</div><div><strong>Location</strong><p>Kampala, Uganda</p></div></div>
+            <div class="contact-item"><div class="contact-icon">◷</div><div><strong>Ministry Availability</strong><p>All day, Monday to Monday</p></div></div>
+          </div>
+        </div>
+        <form id="contactForm">
+          <h3>Send a Message</h3>
+          <div class="field-row">
+            <div><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Your name" required></div>
+            <div><label for="email">Your email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+          </div>
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" placeholder="How can we pray for or help you?" required></textarea>
+          <button class="btn btn-gold" type="submit">➤ &nbsp;Send Email</button>
+          <p class="form-note">This form opens your email app with your message ready to send. It does not store messages on this website.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo" aria-hidden="true">🌍📖</div>
+        <div><div class="brand-title">Watchmen of God<br>Ministry International</div><span class="tagline">TAKING THE GOSPEL TO NATIONS</span></div>
+      </div>
+      <div class="footer-contact">📍 Kampala, Uganda<br>✉ <a href="mailto:holysamuel98@gmail.com">holysamuel98@gmail.com</a><br>☎ <a href="tel:+256783416680">0783416680</a></div>
+      <div class="copyright">© <span id="year">2026</span> Watchmen of God Ministry International.<br>All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      const nav=document.getElementById('mainNav');
+      const button=document.querySelector('.menu-toggle');
+      const open=nav.classList.toggle('open');
+      button.setAttribute('aria-expanded',String(open));
+      button.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');
+    }
+    function closeMenu(){
+      document.getElementById('mainNav').classList.remove('open');
+      document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');
+    }
+    document.getElementById('contactForm').addEventListener('submit',function(event){
+      event.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const email=document.getElementById('email').value.trim();
+      const message=document.getElementById('message').value.trim();
+      const subject=encodeURIComponent('Website message from '+name);
+      const body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\nMessage:\n'+message);
+      window.location.href='mailto:holysamuel98@gmail.com?subject='+subject+'&body='+body;
+    });
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
